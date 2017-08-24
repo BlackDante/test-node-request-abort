@@ -1,0 +1,21 @@
+<script>
+{
+    function sendRequest(doAbort = true) {
+        var req = new XMLHttpRequest();
+        req.open('GET', '/api', true); 
+        req.send(null);
+
+        if (doAbort) {
+            req.abort();
+        }
+    }
+
+    sendRequest(false);
+    sendRequest();
+    sendRequest();
+    sendRequest();
+    sendRequest();
+    sendRequest();
+    sendRequest(false);
+}
+</script>    
